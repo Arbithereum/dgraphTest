@@ -4,5 +4,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1
-        run: echo "MY_VAR=$MY_VAR"
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+      - name: Read file
+        run: echo "The file contains $(cat my-file.txt)"
