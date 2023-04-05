@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: Set output
         run: echo "{action_state}={value}" >> $GITHUB_OUTPUT
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.action_state }}"
