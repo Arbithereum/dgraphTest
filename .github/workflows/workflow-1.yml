@@ -16,9 +16,9 @@ on:
       - '**.dockerignore'
       - '**.gitignore'
       - '**/**.md'
-      - '**.png'
-      - '**.sh'
-      - '**.gif'
+      - '**/**.png'
+      - '**/**.sh'
+      - '**/**.gif'
 jobs:
   build:
     runs-on: ubuntu-latest
