@@ -6,6 +6,6 @@ jobs:
     outputs:
       my-output: ${{ steps.step1.outputs.my-value }}
     steps:
-      - name: Step 1
+      - name: Save state
         id: step1
-        run: echo "::set-output name=my-value::hello world"
+        run: echo "{name}={Hello world}" >> $GITHUB_STATE
