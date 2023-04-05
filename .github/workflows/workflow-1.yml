@@ -1,5 +1,21 @@
 name: Workflow 1
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - '.vscode/**'
+      - 'compose/**'
+      - 'contrib/**'
+      - 'dgraphtest/**'
+      - 'licenses/**'
+      - 'paper/**'
+      - 'RFC/**'
+      - 'static/**'
+      - 't/**'
+      - 'telemetry/**'
+      - 'wiki/**'
+      - '**.dockerignore'
+      - '**.gitignore'
+      - '**.md'
 jobs:
   build:
     runs-on: ubuntu-latest
