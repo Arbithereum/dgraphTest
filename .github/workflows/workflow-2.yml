@@ -10,4 +10,4 @@ jobs:
       - name: Set output
         run: echo "{action_state}={value}" >> $GITHUB_OUTPUT
       - name: Get color
-        run: echo "The selected color is ${{ env.action_state }}"
+        run: echo "The selected color is ${{ steps.step1.outputs.action_state }}"
