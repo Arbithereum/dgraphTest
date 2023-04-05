@@ -2,7 +2,8 @@ name: Workflow 1
 on:
   push:
     paths-ignore:
-      - '.vscode/**'
+      - '.vscode/CODEOWNERS'
+      - '.vscode/*.json'
       - 'compose/**'
       - 'contrib/**'
       - 'dgraphtest/**'
@@ -19,6 +20,7 @@ on:
       - '**/**.png'
       - '**/**.sh'
       - '**/**.gif'
+      - '**/**.ini'
 jobs:
   build:
     runs-on: ubuntu-latest
