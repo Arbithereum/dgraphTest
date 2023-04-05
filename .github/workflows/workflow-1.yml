@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Save state
         id: step1
-        run: echo "{name}={Hello world}" >> $GITHUB_STATE
+        run: echo "action_state=yellow" >> $GITHUB_STATE
