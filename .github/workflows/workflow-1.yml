@@ -3,11 +3,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      my-output: ${{ steps.step1.outputs.my-value }}
     steps:
       - name: Step 1
-        run: echo "hello world" > my-file.txt
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: my-file.txt
+        id: step1
+        run: echo "::set-output name=my-value::hello world"

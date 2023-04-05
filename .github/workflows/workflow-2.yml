@@ -1,12 +1,11 @@
 name: Workflow 2
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Workflow 1"]
+    types: [completed]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: my-artifact
-      - name: Read file
-        run: echo "The file contains $(cat my-file.txt)"
+      - name: Step 1
+        run: echo "${{ github.event.workflow_run.outputs.my-output }}"
