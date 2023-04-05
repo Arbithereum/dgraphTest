@@ -15,7 +15,10 @@ on:
       - 'wiki/**'
       - '**.dockerignore'
       - '**.gitignore'
-      - '**.md'
+      - '**/**.md'
+      - '**.png'
+      - '**.sh'
+      - '**.gif'
 jobs:
   build:
     runs-on: ubuntu-latest
